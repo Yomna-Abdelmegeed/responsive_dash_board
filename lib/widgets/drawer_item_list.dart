@@ -44,19 +44,22 @@ class _DrawerItemListState extends State<DrawerItemList> {
         physics: NeverScrollableScrollPhysics(),
         itemCount: drawerItemList.length,
         itemBuilder: (context, index) {
-          return activeIndex == index
-              ? ActiveDrawerItem(
-                  drawerItemModel: drawerItemList[index],
-                )
-              : InActiveDrawerItem(
-                  drawerItemModel: drawerItemList[index],
-                  onTap: () {
-                    setState(() {
-                      activeIndex = index;
-                      log("activeIndex = $activeIndex ");
-                    });
-                  },
-                );
+          return Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: activeIndex == index
+                ? ActiveDrawerItem(
+                    drawerItemModel: drawerItemList[index],
+                  )
+                : InActiveDrawerItem(
+                    drawerItemModel: drawerItemList[index],
+                    onTap: () {
+                      setState(() {
+                        activeIndex = index;
+                        log("activeIndex = $activeIndex ");
+                      });
+                    },
+                  ),
+          );
         });
   }
 }

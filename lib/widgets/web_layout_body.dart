@@ -18,7 +18,7 @@ class WebLayoutBody extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 28),
               child: Column(
                 children: [
-                  SizedBox(height: 120),
+                  SizedBox(height: 48),
                   InfoListTile(
                     image: Assets.imagesFace1,
                     title: 'Lekan Okeowo',

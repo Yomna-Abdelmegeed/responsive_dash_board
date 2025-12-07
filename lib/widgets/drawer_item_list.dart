@@ -46,20 +46,16 @@ class _DrawerItemListState extends State<DrawerItemList> {
         itemBuilder: (context, index) {
           return activeIndex == index
               ? ActiveDrawerItem(
-                  image: drawerItemList[index].image,
-                  title: drawerItemList[index].title,
+                  drawerItemModel: drawerItemList[index],
                 )
-              : InkWell(
+              : InActiveDrawerItem(
+                  drawerItemModel: drawerItemList[index],
                   onTap: () {
                     setState(() {
                       activeIndex = index;
                       log("activeIndex = $activeIndex ");
                     });
                   },
-                  child: InActiveDrawerItem(
-                    image: drawerItemList[index].image,
-                    title: drawerItemList[index].title,
-                  ),
                 );
         });
   }

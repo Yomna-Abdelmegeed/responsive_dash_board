@@ -13,7 +13,7 @@ class MonthlyFilterButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(12)),
           border: Border.all(
             width: 1.0,
-            color: AppColors.grey,
+            color: AppColors.halfGrey,
           )),
       child: Row(
         children: [

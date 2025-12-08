@@ -13,14 +13,23 @@ class WebSidebar extends StatelessWidget {
       backgroundColor: AppColors.white,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 28),
-        child: Column(
-          children: [
-            SizedBox(height: 48),
-            SidebarHeader(),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(child: SizedBox(height: 24)),
+            SliverToBoxAdapter(child: SidebarHeader()),
             DrawerItemList(),
-            Spacer(),
-            SidebarFooter(),
-            SizedBox(height: 48),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: SizedBox(height: 48),
+                  ),
+                  SidebarFooter(),
+                  SizedBox(height: 24),
+                ],
+              ),
+            ),
           ],
         ),
       ),

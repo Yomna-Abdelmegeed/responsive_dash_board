@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/core/theme/app_colors.dart';
 
 class ImageAndArrowRow extends StatelessWidget {
-  const ImageAndArrowRow({super.key, required this.image, required this.color});
+  const ImageAndArrowRow(
+      {super.key,
+      required this.image,
+      required this.color,
+      required this.backgroundColor});
   final String image;
-  final Color color;
+  final Color color, backgroundColor;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CircleAvatar(
-          backgroundColor: AppColors.lightGrey,
+          radius: 30,
+          backgroundColor: backgroundColor,
           child: Image.asset(image),
         ),
         Icon(

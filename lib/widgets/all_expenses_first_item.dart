@@ -4,42 +4,45 @@ import 'package:responsive_dash_board/core/theme/app_text_styles.dart';
 import 'package:responsive_dash_board/model/all_expenses_item_model.dart';
 import 'package:responsive_dash_board/widgets/image_and_arrow_row.dart';
 
-class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key, required this.allExpensesItemModel});
+class AllExpensesFirstItem extends StatelessWidget {
+  const AllExpensesFirstItem({super.key, required this.allExpensesItemModel});
   final AllExpensesItemModel allExpensesItemModel;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
       decoration: BoxDecoration(
+        color: AppColors.secondary,
         borderRadius: BorderRadius.all(Radius.circular(12)),
-        border: Border.all(
-          width: 1.0,
-          color: AppColors.grey,
-        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ImageAndArrowRow(
             image: allExpensesItemModel.image,
-            color: AppColors.primary,
-            backgroundColor: AppColors.lightGrey,
+            color: AppColors.white,
+            backgroundColor: AppColors.white.withAlpha(50),
           ),
           SizedBox(height: 34),
           Text(
             allExpensesItemModel.title,
-            style: AppTextStyles.styleSemiBold16,
+            style: AppTextStyles.styleSemiBold16.copyWith(
+              color: AppColors.white,
+            ),
           ),
           SizedBox(height: 8),
           Text(
             allExpensesItemModel.date,
-            style: AppTextStyles.styleRegular14,
+            style: AppTextStyles.styleRegular14.copyWith(
+              color: AppColors.white,
+            ),
           ),
           SizedBox(height: 16),
           Text(
             allExpensesItemModel.price,
-            style: AppTextStyles.styleSemiBold24,
+            style: AppTextStyles.styleSemiBold24.copyWith(
+              color: AppColors.white,
+            ),
           ),
         ],
       ),

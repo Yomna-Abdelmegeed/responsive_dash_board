@@ -37,8 +37,8 @@ class AllExpenses extends StatelessWidget {
               Expanded(
                 child: AllExpensesItem(
                   allExpensesItemModel: AllExpensesItemModel(
-                      image: Assets.imagesWallet,
-                      title: 'Balance',
+                      image: Assets.imagesIncome,
+                      title: 'Income',
                       date: 'April 2022',
                       price: r'$20,129'),
                 ),
@@ -47,8 +47,8 @@ class AllExpenses extends StatelessWidget {
               Expanded(
                 child: AllExpensesItem(
                   allExpensesItemModel: AllExpensesItemModel(
-                      image: Assets.imagesWallet,
-                      title: 'Balance',
+                      image: Assets.imagesExpenses,
+                      title: 'Expenses',
                       date: 'April 2022',
                       price: r'$20,129'),
                 ),

@@ -12,7 +12,7 @@ class WebLayoutBody extends StatelessWidget {
         Expanded(
           child: WebSidebar(),
         ),
-        SizedBox(width: 8),
+        SizedBox(width: 32),
         Expanded(
           child: WebBody(),
         )

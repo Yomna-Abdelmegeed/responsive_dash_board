@@ -3,6 +3,7 @@ import 'package:responsive_dash_board/core/theme/app_colors.dart';
 import 'package:responsive_dash_board/core/theme/app_text_styles.dart';
 import 'package:responsive_dash_board/core/utils/assets_data.dart';
 import 'package:responsive_dash_board/widgets/info_list_tile.dart';
+import 'package:responsive_dash_board/widgets/invoice_actions_row.dart';
 import 'package:responsive_dash_board/widgets/invoice_form_section.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_header.dart';
 
@@ -36,6 +37,8 @@ class QuickInvoice extends StatelessWidget {
           Divider(),
           SizedBox(height: 24),
           InvoiceFormSection(),
+          SizedBox(height: 24),
+          InvoiceActionsRow(),
         ],
       ),
     );

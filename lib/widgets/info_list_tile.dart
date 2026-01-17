@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_colors.dart';
 import 'package:responsive_dash_board/core/theme/app_text_styles.dart';
+import 'package:responsive_dash_board/model/user_info_model.dart';
 
 class InfoListTile extends StatelessWidget {
   const InfoListTile({
     super.key,
-    required this.image,
-    required this.title,
-    required this.subtitle,
+    required this.userInfoModel,
   });
 
-  final String image, title, subtitle;
+  final UserInfoModel userInfoModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,13 +18,13 @@ class InfoListTile extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
       child: ListTile(
-        leading: Image.asset(image),
+        leading: Image.asset(userInfoModel.image),
         title: Text(
-          title,
+          userInfoModel.title,
           style: AppTextStyles.styleSemiBold16,
         ),
         subtitle: Text(
-          subtitle,
+          userInfoModel.subtitle,
           style: AppTextStyles.styleRegular12,
         ),
       ),

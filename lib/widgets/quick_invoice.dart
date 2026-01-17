@@ -28,9 +28,10 @@ class QuickInvoice extends StatelessWidget {
           ),
           SizedBox(height: 12),
           InfoListTileList(),
-          SizedBox(height: 24),
-          Divider(),
-          SizedBox(height: 24),
+          Divider(
+            height: 48,
+            color: AppColors.halfGrey,
+          ),
           InvoiceFormSection(),
           SizedBox(height: 24),
           InvoiceActionsRow(),

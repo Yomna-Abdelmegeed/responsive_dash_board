@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_text_styles.dart';
-import 'package:responsive_dash_board/widgets/dots_indicator.dart';
+import 'package:responsive_dash_board/widgets/dots_indicator_list.dart';
 import 'package:responsive_dash_board/widgets/my_bank_card_page_view.dart';
 
 class MyCard extends StatelessWidget {
@@ -18,7 +18,9 @@ class MyCard extends StatelessWidget {
         SizedBox(height: 20),
         MyBankCardPageView(),
         SizedBox(height: 20),
-        DotsIndicator(isActive: false)
+        DotsIndicatorList(
+          currentIndex: 0,
+        ),
       ],
     );
   }

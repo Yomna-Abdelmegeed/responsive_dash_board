@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_colors.dart';
-import 'package:responsive_dash_board/widgets/my_bank_card_page_view.dart';
+import 'package:responsive_dash_board/widgets/my_card.dart';
 
 class MycardAndTransactionHistorySection extends StatelessWidget {
   const MycardAndTransactionHistorySection({super.key});
@@ -18,7 +18,7 @@ class MycardAndTransactionHistorySection extends StatelessWidget {
         ),
         child: Column(
           children: [
-            MyBankCardPageView(),
+            MyCard(),
             Divider(
               height: 40,
             )

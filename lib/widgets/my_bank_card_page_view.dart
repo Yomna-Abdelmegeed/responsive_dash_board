@@ -10,7 +10,10 @@ class MyBankCardPageView extends StatelessWidget {
     return ExpandablePageView(
       children: List.generate(
         3,
-        (index) => MyBankCard(),
+        (index) => Padding(
+          padding: const EdgeInsets.only(right: 8.0),
+          child: MyBankCard(),
+        ),
       ),
     );
   }

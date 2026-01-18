@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/my_bank_card.dart';
 
 class MyBankCardPageView extends StatelessWidget {
-  const MyBankCardPageView({super.key});
-
+  const MyBankCardPageView({super.key, required this.pageController});
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView(
+      controller: pageController,
       children: List.generate(
         3,
         (index) => Padding(

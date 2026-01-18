@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/income_section.dart';
 import 'package:responsive_dash_board/widgets/mycard_and_transaction_history_section.dart';
 
 class FinancialOverviewSection extends StatelessWidget {
@@ -10,6 +11,7 @@ class FinancialOverviewSection extends StatelessWidget {
       child: Column(
         children: [
           MycardAndTransactionHistorySection(),
+          IncomeSection(),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/transaction_history_body.dart';
 import 'package:responsive_dash_board/widgets/transaction_history_header.dart';
 
 class TransactionHistory extends StatelessWidget {
@@ -9,6 +10,7 @@ class TransactionHistory extends StatelessWidget {
     return Column(
       children: [
         TransactionHistoryHeader(),
+        TransactionHistoryBody(),
       ],
     );
   }

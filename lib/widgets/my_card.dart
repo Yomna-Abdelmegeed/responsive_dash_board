@@ -12,7 +12,7 @@ class MyCard extends StatefulWidget {
 
 class _MyCardState extends State<MyCard> {
   late PageController pageController;
-  int currentPageIndex = 1;
+  int currentPageIndex = 0;
 
   @override
   void initState() {

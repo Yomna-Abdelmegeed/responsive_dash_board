@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_colors.dart';
 import 'package:responsive_dash_board/core/theme/app_text_styles.dart';
 import 'package:responsive_dash_board/widgets/monthly_filter_button.dart';
+import 'package:responsive_dash_board/widgets/sample_pie_chart.dart';
 
 class IncomeSection extends StatelessWidget {
   const IncomeSection({super.key});
@@ -28,7 +29,8 @@ class IncomeSection extends StatelessWidget {
                 ),
                 MonthlyFilterButton(),
               ],
-            )
+            ),
+            SamplePieChart()
           ],
         ),
       ),

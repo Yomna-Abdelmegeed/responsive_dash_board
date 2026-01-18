@@ -6,10 +6,12 @@ class FinancialOverviewSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        MycardAndTransactionHistorySection(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          MycardAndTransactionHistorySection(),
+        ],
+      ),
     );
   }
 }

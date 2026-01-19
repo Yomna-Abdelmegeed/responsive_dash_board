@@ -16,13 +16,22 @@ class WebLayoutBody extends StatelessWidget {
         ),
         SizedBox(width: 32),
         Expanded(
-          flex: 6,
-          child: WebBody(),
-        ),
-        Expanded(
-          flex: 4,
-          child: FinancialOverviewSection(),
-        ),
+          flex: 10,
+          child: SingleChildScrollView(
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: WebBody(),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: FinancialOverviewSection(),
+                ),
+              ],
+            ),
+          ),
+        )
       ],
     );
   }

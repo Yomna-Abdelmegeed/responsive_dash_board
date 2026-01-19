@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/tablet_layout.dart';
 import 'package:responsive_dash_board/widgets/web_layout_body.dart';
 import 'package:responsive_dash_board/widgets/adaptive_layout.dart';
 
@@ -11,7 +12,7 @@ class DashBoardView extends StatelessWidget {
       backgroundColor: Color(0xfff7f9fa),
       body: AdaptiveLayout(
         mobileLayout: (context) => SizedBox(),
-        tabletLayout: (context) => SizedBox(),
+        tabletLayout: (context) => TabletLayout(),
         webLayout: (context) => WebLayoutBody(),
       ),
     );

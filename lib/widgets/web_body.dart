@@ -8,12 +8,15 @@ class WebBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          AllExpenses(),
-          SizedBox(height: 24),
-          QuickInvoice(),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24),
+        child: Column(
+          children: [
+            AllExpenses(),
+            SizedBox(height: 24),
+            QuickInvoice(),
+          ],
+        ),
       ),
     );
   }

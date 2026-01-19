@@ -27,17 +27,18 @@ class TransactionHistoryListTileList extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      children: List.generate(
-        transactionHistoryitem.length,
-        (index) => Padding(
+    return Column(
+      children: transactionHistoryitem.asMap().entries.map((entry) {
+        int index = entry.key;
+        var e = entry.value;
+
+        return Padding(
           padding: EdgeInsets.only(bottom: (index == 0 || index == 1) ? 12 : 0),
           child: TransactionHistoryListTile(
-            transactionHistoryModel: transactionHistoryitem[index],
+            transactionHistoryModel: e,
           ),
-        ),
-      ),
+        );
+      }).toList(),
     );
   }
 }

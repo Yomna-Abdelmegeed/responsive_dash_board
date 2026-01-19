@@ -14,24 +14,30 @@ class WebLayoutBody extends StatelessWidget {
           flex: 3,
           child: WebSidebar(),
         ),
-        SizedBox(width: 32),
+        const SizedBox(width: 24),
         Expanded(
           flex: 10,
-          child: SingleChildScrollView(
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: WebBody(),
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: WebBody(),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: FinancialOverviewSection(),
+                    ),
+                  ],
                 ),
-                Expanded(
-                  flex: 2,
-                  child: FinancialOverviewSection(),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        )
+        ),
       ],
     );
   }

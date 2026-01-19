@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_colors.dart';
 import 'package:responsive_dash_board/core/theme/app_text_styles.dart';
-import 'package:responsive_dash_board/widgets/transaction_historyList_tile_list.dart';
+import 'package:responsive_dash_board/widgets/transaction_history_list_tile_list.dart';
 
 class TransactionHistoryBody extends StatelessWidget {
   const TransactionHistoryBody({super.key});

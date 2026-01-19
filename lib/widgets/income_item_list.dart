@@ -31,18 +31,21 @@ class IncomeItemList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      children: List.generate(
-        incomeItems.length,
-        (index) => Padding(
-          padding: EdgeInsets.only(
-              bottom: index != incomeItems.length - 1 ? 12.0 : 0),
-          child: IncomeItem(
-            incomeModel: incomeItems[index],
-          ),
-        ),
-      ),
+    return Column(
+      children: incomeItems.asMap().entries.map(
+        (entry) {
+          int index = entry.key;
+          IncomeModel e = entry.value;
+
+          return Padding(
+            padding: EdgeInsets.only(
+                bottom: index != incomeItems.length - 1 ? 12.0 : 0),
+            child: IncomeItem(
+              incomeModel: e,
+            ),
+          );
+        },
+      ).toList(),
     );
   }
 }

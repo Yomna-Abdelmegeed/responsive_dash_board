@@ -10,7 +10,7 @@ class FinancialOverviewSection extends StatelessWidget {
     return Column(
       children: [
         MycardAndTransactionHistorySection(),
-        IncomeSection(),
+         IncomeSection(),
       ],
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_colors.dart';
+import 'package:responsive_dash_board/core/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/mobile_layout.dart';
 import 'package:responsive_dash_board/widgets/tablet_layout.dart';
 import 'package:responsive_dash_board/widgets/web_layout_body.dart';
@@ -20,8 +21,10 @@ class _DashBoardViewState extends State<DashBoardView> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      drawer: MediaQuery.sizeOf(context).width < 600 ? WebSidebar() : null,
-      appBar: MediaQuery.sizeOf(context).width < 600
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tabletLayout
+          ? WebSidebar()
+          : null,
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tabletLayout
           ? AppBar(
               backgroundColor: AppColors.white,
               elevation: 0,

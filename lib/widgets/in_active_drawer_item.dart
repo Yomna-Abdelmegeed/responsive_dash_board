@@ -16,9 +16,13 @@ class InActiveDrawerItem extends StatelessWidget {
     return ListTile(
       onTap: onTap ?? () {},
       leading: Image.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: AppTextStyles.styleRegular16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerItemModel.title,
+          style: AppTextStyles.styleRegular16(context),
+        ),
       ),
     );
   }

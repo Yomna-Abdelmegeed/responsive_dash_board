@@ -19,13 +19,21 @@ class InfoListTile extends StatelessWidget {
       ),
       child: ListTile(
         leading: Image.asset(userInfoModel.image),
-        title: Text(
-          userInfoModel.title,
-          style: AppTextStyles.styleSemiBold16(context),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.title,
+            style: AppTextStyles.styleSemiBold16(context),
+          ),
         ),
-        subtitle: Text(
-          userInfoModel.subtitle,
-          style: AppTextStyles.styleRegular12(context),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.subtitle,
+            style: AppTextStyles.styleRegular12(context),
+          ),
         ),
       ),
     );

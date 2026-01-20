@@ -13,13 +13,13 @@ class MyCardListTile extends StatelessWidget {
     return ListTile(
       title: Text(
         myCardModel.title,
-        style: AppTextStyles.styleRegular16.copyWith(
+        style: AppTextStyles.styleRegular16(context).copyWith(
           color: AppColors.white,
         ),
       ),
       subtitle: Text(
         myCardModel.subtitle,
-        style: AppTextStyles.styleMedium20,
+        style: AppTextStyles.styleMedium20(context),
       ),
       trailing: Image.asset(myCardModel.image),
     );

@@ -31,17 +31,17 @@ class InActiveAllExpensesItem extends StatelessWidget {
           SizedBox(height: 34),
           Text(
             allExpensesItemModel.title,
-            style: AppTextStyles.styleSemiBold16,
+            style: AppTextStyles.styleSemiBold16(context),
           ),
           SizedBox(height: 8),
           Text(
             allExpensesItemModel.date,
-            style: AppTextStyles.styleRegular14,
+            style: AppTextStyles.styleRegular14(context),
           ),
           SizedBox(height: 16),
           Text(
             allExpensesItemModel.price,
-            style: AppTextStyles.styleSemiBold24,
+            style: AppTextStyles.styleSemiBold24(context),
           ),
         ],
       ),

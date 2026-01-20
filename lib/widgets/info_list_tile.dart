@@ -21,11 +21,11 @@ class InfoListTile extends StatelessWidget {
         leading: Image.asset(userInfoModel.image),
         title: Text(
           userInfoModel.title,
-          style: AppTextStyles.styleSemiBold16,
+          style: AppTextStyles.styleSemiBold16(context),
         ),
         subtitle: Text(
           userInfoModel.subtitle,
-          style: AppTextStyles.styleRegular12,
+          style: AppTextStyles.styleRegular12(context),
         ),
       ),
     );

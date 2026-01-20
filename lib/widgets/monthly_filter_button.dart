@@ -19,7 +19,7 @@ class MonthlyFilterButton extends StatelessWidget {
         children: [
           Text(
             'Monthly',
-            style: AppTextStyles.styleMedium16,
+            style: AppTextStyles.styleMedium16(context),
           ),
           SizedBox(width: 18),
           Icon(

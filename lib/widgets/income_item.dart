@@ -21,14 +21,14 @@ class IncomeItem extends StatelessWidget {
             SizedBox(width: 12),
             Text(
               incomeModel.title,
-              style: AppTextStyles.styleRegular16,
+              style: AppTextStyles.styleRegular16(context),
             ),
           ],
         ),
         Text(
           incomeModel.percentage,
           style:
-              AppTextStyles.styleMedium16.copyWith(color: AppColors.secondary),
+              AppTextStyles.styleMedium16(context).copyWith(color: AppColors.secondary),
         )
       ],
     );

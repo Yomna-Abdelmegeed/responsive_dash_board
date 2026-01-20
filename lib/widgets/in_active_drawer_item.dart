@@ -18,7 +18,7 @@ class InActiveDrawerItem extends StatelessWidget {
       leading: Image.asset(drawerItemModel.image),
       title: Text(
         drawerItemModel.title,
-        style: AppTextStyles.styleRegular16,
+        style: AppTextStyles.styleRegular16(context),
       ),
     );
   }

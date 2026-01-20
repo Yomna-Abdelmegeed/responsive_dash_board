@@ -32,7 +32,7 @@ class _MyCardState extends State<MyCard> {
       children: [
         Text(
           'My card',
-          style: AppTextStyles.styleSemiBold20,
+          style: AppTextStyles.styleSemiBold20(context),
         ),
         SizedBox(height: 20),
         MyBankCardPageView(pageController: pageController),

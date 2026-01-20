@@ -34,7 +34,7 @@ class SendMoneyButton extends StatelessWidget {
         ),
         child: Text(
           'Send Money',
-          style: AppTextStyles.styleSemiBold18.copyWith(
+          style: AppTextStyles.styleSemiBold18(context).copyWith(
             color: AppColors.white,
           ),
         ),
@@ -59,7 +59,7 @@ class AddMoreDetailsTextButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: Text('Add more details', style: AppTextStyles.styleSemiBold18),
+        child: Text('Add more details', style: AppTextStyles.styleSemiBold18(context)),
       ),
     );
   }

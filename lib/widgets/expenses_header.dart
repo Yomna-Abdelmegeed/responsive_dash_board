@@ -12,7 +12,7 @@ class ExpensesHeader extends StatelessWidget {
       children: [
         Text(
           'All Expenses',
-          style: AppTextStyles.styleSemiBold20,
+          style: AppTextStyles.styleSemiBold20(context),
         ),
         MonthlyFilterButton(),
       ],

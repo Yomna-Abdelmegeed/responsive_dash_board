@@ -40,13 +40,13 @@ class MyBankCard extends StatelessWidget {
               children: [
                 Text(
                   '0918 8124 0042 8129',
-                  style: AppTextStyles.styleSemiBold24.copyWith(
+                  style: AppTextStyles.styleSemiBold24(context).copyWith(
                     color: AppColors.white,
                   ),
                 ),
                 Text(
                   '12/20 - 124',
-                  style: AppTextStyles.styleRegular16.copyWith(
+                  style: AppTextStyles.styleRegular16(context).copyWith(
                     color: AppColors.white,
                   ),
                 ),

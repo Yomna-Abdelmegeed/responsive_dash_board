@@ -27,21 +27,21 @@ class ActiveAllExpensesItem extends StatelessWidget {
           SizedBox(height: 34),
           Text(
             allExpensesItemModel.title,
-            style: AppTextStyles.styleSemiBold16.copyWith(
+            style: AppTextStyles.styleSemiBold16(context).copyWith(
               color: AppColors.white,
             ),
           ),
           SizedBox(height: 8),
           Text(
             allExpensesItemModel.date,
-            style: AppTextStyles.styleRegular14.copyWith(
+            style: AppTextStyles.styleRegular14(context).copyWith(
               color: AppColors.white,
             ),
           ),
           SizedBox(height: 16),
           Text(
             allExpensesItemModel.price,
-            style: AppTextStyles.styleSemiBold24.copyWith(
+            style: AppTextStyles.styleSemiBold24(context).copyWith(
               color: AppColors.white,
             ),
           ),

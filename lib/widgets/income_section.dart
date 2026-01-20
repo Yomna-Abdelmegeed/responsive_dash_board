@@ -26,7 +26,7 @@ class IncomeSection extends StatelessWidget {
               children: [
                 Text(
                   'Income',
-                  style: AppTextStyles.styleSemiBold20,
+                  style: AppTextStyles.styleSemiBold20(context),
                 ),
                 MonthlyFilterButton(),
               ],

@@ -19,7 +19,7 @@ class CustomerTextField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppTextStyles.styleMedium16,
+          style: AppTextStyles.styleMedium16(context),
         ),
         const SizedBox(height: 12),
         TextField(
@@ -28,7 +28,7 @@ class CustomerTextField extends StatelessWidget {
             filled: true,
             fillColor: AppColors.lightGrey,
             hintText: hint,
-            hintStyle: AppTextStyles.styleRegular16.copyWith(
+            hintStyle: AppTextStyles.styleRegular16(context).copyWith(
               color: AppColors.grey,
             ),
             border: OutlineInputBorder(

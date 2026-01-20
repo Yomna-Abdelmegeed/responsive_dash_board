@@ -16,7 +16,7 @@ class ActiveDrawerItem extends StatelessWidget {
       leading: Image.asset(drawerItemModel.image),
       title: Text(
         drawerItemModel.title,
-        style: AppTextStyles.styleBold16,
+        style: AppTextStyles.styleBold16(context),
       ),
       trailing: Container(
         width: 4,

@@ -15,95 +15,95 @@ abstract class AppTextStyles {
     return TextStyle(
       color: AppColors.primary,
       fontFamily: 'Montserrat',
-      fontSize: 16,
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w600,
     );
   }
 
   static TextStyle styleSemiBold20(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.primary,
       fontFamily: 'Montserrat',
-      fontSize: 20,
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.w600,
     );
   }
 
   static TextStyle styleSemiBold24(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.secondary,
       fontFamily: 'Montserrat',
-      fontSize: 24,
+      fontSize: getResponsiveFontSize(context, fontSize: 24),
       fontWeight: FontWeight.w600,
     );
   }
 
   static TextStyle styleSemiBold18(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.secondary,
       fontFamily: 'Montserrat',
-      fontSize: 18,
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontWeight: FontWeight.w600,
     );
   }
 
   static TextStyle styleRegular12(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.grey,
       fontFamily: 'Montserrat',
-      fontSize: 12,
+      fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w400,
     );
   }
 
   static TextStyle styleRegular16(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.primary,
       fontFamily: 'Montserrat',
-      fontSize: 16,
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w400,
     );
   }
 
   static TextStyle styleRegular14(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.grey,
       fontFamily: 'Montserrat',
-      fontSize: 14,
+      fontSize: getResponsiveFontSize(context, fontSize: 14),
       fontWeight: FontWeight.w400,
     );
   }
 
   static TextStyle styleBold16(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.secondary,
       fontFamily: 'Montserrat',
-      fontSize: 16,
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w700,
     );
   }
 
   static TextStyle styleMedium16(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.primary,
       fontFamily: 'Montserrat',
-      fontSize: 16,
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w500,
     );
   }
 
   static TextStyle styleMedium20(BuildContext context) {
-    return const TextStyle(
+    return TextStyle(
       color: AppColors.white,
       fontFamily: 'Montserrat',
-      fontSize: 20,
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.w500,
     );
   }
 
 //* function for Responsive FontSize
 
-  double getResponsiveFontSize(context, {required double fontSize}) {
+  static double getResponsiveFontSize(context, {required double fontSize}) {
     double scaleFactor = getScaleFactor(context);
     double responsiveFontSize = fontSize * scaleFactor;
 
@@ -114,7 +114,7 @@ abstract class AppTextStyles {
   }
 
   //* function for Scale Factor
-  double getScaleFactor(BuildContext context) {
+  static double getScaleFactor(BuildContext context) {
     //! for tablet and mobile layout (not use context)
     // var dispatcher = PlatformDispatcher.instance;
     // var physicalWidth = dispatcher.views.first.physicalSize.width;

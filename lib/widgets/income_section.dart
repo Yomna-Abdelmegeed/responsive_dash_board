@@ -35,11 +35,12 @@ class IncomeSection extends StatelessWidget {
             Row(
               children: [
                 Expanded(
+                  flex: 3,
                   child: SamplePieChart(),
                 ),
-                SizedBox(width: 40),
+                SizedBox(width: 8),
                 Expanded(
-                  flex: 2,
+                  flex: 4,
                   child: IncomeItemList(),
                 )
               ],

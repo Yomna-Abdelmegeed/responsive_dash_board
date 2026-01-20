@@ -43,7 +43,7 @@ class PieChart2State extends State {
   List<PieChartSectionData> showingSections() {
     return List.generate(4, (i) {
       final isTouched = i == touchedIndex;
-      final radius = isTouched ? 30.0 : 25.0;
+      final radius = isTouched ? 32.0 : 25.0;
       return switch (i) {
         0 => PieChartSectionData(
             color: AppColors.beige,

@@ -13,18 +13,25 @@ class IncomeSectionBody extends StatelessWidget {
 
     return width <= 1444 && width >= SizeConfig.webLayout
         ? AnotherSamplePieChart()
-        : Row(
-            children: [
-              Expanded(
-                flex: 3,
-                child: SamplePieChart(),
-              ),
-              SizedBox(width: 8),
-              Expanded(
-                flex: 4,
-                child: IncomeItemList(),
+        : width < SizeConfig.tabletLayout
+            ? Column(
+                children: [
+                  SamplePieChart(),
+                  IncomeItemList(),
+                ],
               )
-            ],
-          );
+            : Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: SamplePieChart(),
+                  ),
+                  SizedBox(width: 8),
+                  Expanded(
+                    flex: 4,
+                    child: IncomeItemList(),
+                  )
+                ],
+              );
   }
 }

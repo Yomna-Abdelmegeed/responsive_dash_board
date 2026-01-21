@@ -9,9 +9,8 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 24, right: 24, bottom: 24),
+      padding: const EdgeInsets.only(left: 24, right: 24, bottom: 8),
       child: Container(
-        padding: EdgeInsets.all(24),
         decoration: ShapeDecoration(
           color: AppColors.white,
           shape:
@@ -20,7 +19,7 @@ class IncomeSection extends StatelessWidget {
         child: Column(
           children: [
             IncomeSectionHeader(),
-            SizedBox(height: 18),
+            SizedBox(height: 8),
             IncomeSectionBody(),
           ],
         ),

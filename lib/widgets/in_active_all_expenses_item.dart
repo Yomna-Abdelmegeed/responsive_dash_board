@@ -29,19 +29,31 @@ class InActiveAllExpensesItem extends StatelessWidget {
             iconColor: AppColors.blue,
           ),
           SizedBox(height: 34),
-          Text(
-            allExpensesItemModel.title,
-            style: AppTextStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppTextStyles.styleSemiBold16(context),
+            ),
           ),
           SizedBox(height: 8),
-          Text(
-            allExpensesItemModel.date,
-            style: AppTextStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppTextStyles.styleRegular14(context),
+            ),
           ),
           SizedBox(height: 16),
-          Text(
-            allExpensesItemModel.price,
-            style: AppTextStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppTextStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),

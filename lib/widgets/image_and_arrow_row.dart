@@ -14,12 +14,14 @@ class ImageAndArrowRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: backgroundColor,
-          child: ImageIcon(
-            AssetImage(image),
-            color: iconColor,
+        Flexible(
+          child: CircleAvatar(
+            radius: 30,
+            backgroundColor: backgroundColor,
+            child: ImageIcon(
+              AssetImage(image),
+              color: iconColor,
+            ),
           ),
         ),
         Icon(

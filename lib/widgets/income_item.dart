@@ -9,28 +9,26 @@ class IncomeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          children: [
-            CircleAvatar(
-              backgroundColor: incomeModel.color,
-              radius: 6,
-            ),
-            SizedBox(width: 12),
-            Text(
-              incomeModel.title,
-              style: AppTextStyles.styleRegular16(context),
-            ),
-          ],
+    return ListTile(
+      leading: CircleAvatar(
+        backgroundColor: incomeModel.color,
+        radius: 6,
+      ),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
+          incomeModel.title,
+          style: AppTextStyles.styleRegular16(context),
         ),
-        Text(
+      ),
+      trailing: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
           incomeModel.percentage,
-          style:
-              AppTextStyles.styleMedium16(context).copyWith(color: AppColors.secondary),
-        )
-      ],
+          style: AppTextStyles.styleMedium16(context)
+              .copyWith(color: AppColors.secondary),
+        ),
+      ),
     );
   }
 }

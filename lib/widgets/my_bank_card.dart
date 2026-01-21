@@ -15,7 +15,7 @@ class MyBankCard extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(
           right: 16,
-          top: 8,
+          top: 4,
         ),
         decoration: ShapeDecoration(
           image: DecorationImage(image: AssetImage(Assets.imagesCardBg)),

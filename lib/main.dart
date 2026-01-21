@@ -6,7 +6,7 @@ import 'package:responsive_dash_board/view/dash_board_view.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: false, // Disable in release mode if you want
+      enabled: true, // Disable in release mode if you want
       builder: (context) => const DashBoard(),
     ),
   );

@@ -140,5 +140,4 @@ flutter run -d chrome
 **Yomna Abdelmegeed**  
 Flutter Developer & Computer Science Student  
 
-- 💙 Passionate about responsive UI & dashboards  
 - 📱 Specialized in Flutter development

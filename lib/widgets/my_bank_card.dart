@@ -35,23 +35,20 @@ class MyBankCard extends StatelessWidget {
                 image: Assets.imagesGallery,
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  '0918 8124 0042 8129',
-                  style: AppTextStyles.styleSemiBold24(context).copyWith(
-                    color: AppColors.white,
-                  ),
-                ),
-                Text(
-                  '12/20 - 124',
-                  style: AppTextStyles.styleRegular16(context).copyWith(
-                    color: AppColors.white,
-                  ),
-                ),
-                SizedBox(height: 24),
-              ],
+            Text(
+              '0918 8124 0042 8129',
+              style: AppTextStyles.styleSemiBold24(context).copyWith(
+                color: AppColors.white,
+              ),
+            ),
+            Text(
+              '12/20 - 124',
+              style: AppTextStyles.styleRegular16(context).copyWith(
+                color: AppColors.white,
+              ),
+            ),
+            Flexible(
+              child: SizedBox(height: 24),
             ),
           ],
         ),

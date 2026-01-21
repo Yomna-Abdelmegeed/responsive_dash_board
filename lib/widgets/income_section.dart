@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_colors.dart';
-import 'package:responsive_dash_board/core/theme/app_text_styles.dart';
-import 'package:responsive_dash_board/widgets/income_item_list.dart';
-import 'package:responsive_dash_board/widgets/monthly_filter_button.dart';
-import 'package:responsive_dash_board/widgets/sample_pie_chart.dart';
+import 'package:responsive_dash_board/widgets/income_section_body.dart';
+import 'package:responsive_dash_board/widgets/income_section_header.dart';
 
 class IncomeSection extends StatelessWidget {
   const IncomeSection({super.key});
@@ -21,30 +19,9 @@ class IncomeSection extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Income',
-                  style: AppTextStyles.styleSemiBold20(context),
-                ),
-                MonthlyFilterButton(),
-              ],
-            ),
+            IncomeSectionHeader(),
             SizedBox(height: 18),
-            Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: SamplePieChart(),
-                ),
-                SizedBox(width: 8),
-                Expanded(
-                  flex: 4,
-                  child: IncomeItemList(),
-                )
-              ],
-            )
+            IncomeSectionBody(),
           ],
         ),
       ),

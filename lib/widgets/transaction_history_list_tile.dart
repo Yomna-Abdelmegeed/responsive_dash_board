@@ -15,20 +15,33 @@ class TransactionHistoryListTile extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
       child: ListTile(
-        title: Text(
-          transactionHistoryModel.title,
-          style: AppTextStyles.styleSemiBold16(context),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            transactionHistoryModel.title,
+            style: AppTextStyles.styleSemiBold16(context),
+          ),
         ),
-        subtitle: Text(
-          transactionHistoryModel.date,
-          style: AppTextStyles.styleRegular16(context).copyWith(color: AppColors.grey),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            transactionHistoryModel.date,
+            style: AppTextStyles.styleRegular16(context)
+                .copyWith(color: AppColors.grey),
+          ),
         ),
-        trailing: Text(
-          '\$${transactionHistoryModel.mony}',
-          style: AppTextStyles.styleSemiBold20(context).copyWith(
-            color: transactionHistoryModel.isWithdrawal
-                ? AppColors.red
-                : AppColors.green,
+        trailing: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerEnd,
+          child: Text(
+            '\$${transactionHistoryModel.mony}',
+            style: AppTextStyles.styleSemiBold20(context).copyWith(
+              color: transactionHistoryModel.isWithdrawal
+                  ? AppColors.red
+                  : AppColors.green,
+            ),
           ),
         ),
       ),
